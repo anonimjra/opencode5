@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-app: #0e0c12;
+  --bg-card: #15121b;
+  --bg-card-hover: #1c1824;
+  --bg-pill-active: #2b2338;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-active: rgba(192, 132, 252, 0.3);
+  --accent-mauve: #c084fc;
+  --accent-violet: #a855f7;
+  --accent-pink-glow: #f472b6;
+  --gain-green: #34d399;
+  --loss-red: #f87171;
+  --text-primary: #ffffff;
+  --text-secondary: #a19fad;
+  --text-muted: #6b667b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #0e0c12;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+@layer components {
+  .glow-ai-radial {
+    background: radial-gradient(
+      ellipse at 50% 100%,
+      rgba(216, 180, 254, 0.35) 0%,
+      rgba(168, 85, 247, 0.15) 45%,
+      transparent 75%
+    );
+  }
+
+  .pill-active-glow {
+    background: linear-gradient(
+      90deg,
+      rgba(147, 51, 234, 0.35) 0%,
+      rgba(192, 132, 252, 0.2) 100%
+    );
+    border: 1px solid rgba(192, 132, 252, 0.3);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
+  }
+
+  .helios-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 24px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(192, 132, 252, 0.18);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(192, 132, 252, 0.32);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(192, 132, 252, 0.18) transparent;
+}
